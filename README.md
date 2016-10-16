@@ -54,10 +54,9 @@ func main() {
 		"string5",
 	})
 
-	// mappa.Delete("gino dino")
+	mappa.Delete("gino dino")
 
 	mappa.PrintSortOrder()
-	// mappa.PrintReverseOrder()
 
 	mappa.IndentJsonPrint()
 }
