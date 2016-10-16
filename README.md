@@ -35,23 +35,23 @@ func main() {
 	})
 
 	mappa.Set("gino lino", []string{
-		"start",
-		"service1a",
-		"-p",
-		"50100",
-		"-w",
-		"low",
+		"string0",
+		"string1",
+		"string2",
+		"string3",
+		"string4",
+		"string5",
 	})
 
 	mappa.Set("lino", false)
 
 	mappa.Set("gino dino", []string{
-		"start",
-		"service1a",
-		"-p",
-		"50100",
-		"-w",
-		"low",
+		"string0",
+		"string1",
+		"string2",
+		"string3",
+		"string4",
+		"string5",
 	})
 
 	// mappa.Delete("gino dino")
@@ -64,8 +64,8 @@ func main() {
 	mappazza := jsonmap.CreateJson(jsonmap.Maps{
 		"Name":          "service1a",
 		"Type":          "service1a",
-		"Image":         "elleflorio/service1a",
-		"Remote":        "/gru/pippo/services/service1a",
+		"Image":         "pino/service1a",
+		"Remote":        "services",
 		"DiscoveryPort": "50100",
 		"Analytics": []string{
 			"resp_time_ratio",
@@ -75,19 +75,19 @@ func main() {
 		},
 		"Configuration": jsonmap.Maps{
 			"Env": jsonmap.Maps{
-				"ETCD_ADDR":   "",
-				"HostIP":      "",
-				"INFLUX_USER": "",
-				"INFLUX_PWD":  "",
-				"INFLUX_ADDR": "",
+				"ADDRESS":   "",
+				"Host":      "",
+				"USER": "",
+				"PASSROD":  "",
+				"ADDR": "",
 			},
 			"Cmd": []string{
-				"start",
-				"service1a",
-				"-p",
-				"50100",
-				"-w",
-				"low",
+				"string0",
+				"string1",
+				"string2",
+				"string3",
+				"string4",
+				"string5",
 			},
 			"cpunumber": 1,
 			"Ports": jsonmap.Maps{
@@ -101,9 +101,6 @@ func main() {
 	log.Printf("Ricerca valori in Json - BEGIN")
 	log.Printf("*****************************************")
 
-	// log.Printf("%v", mappazza.Exist("Configuration"))
-	// mappazza.Delete("Constraints")
-	// mappazza.IndentJsonPrint()
 	mappazza.Search("Configuration", "j")
 
 	log.Printf("*****************************************")
