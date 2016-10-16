@@ -5,7 +5,7 @@ An easy way for manipulating json file in your web application developed with go
 ### I will provide docs ASAP
 
 
-simple examplte
+First simple example
 ~~~ go
 package main
 
@@ -60,7 +60,19 @@ func main() {
 	// mappa.PrintReverseOrder()
 
 	mappa.IndentJsonPrint()
+}
+~~~
 
+Second simple example
+~~~ go
+package main
+
+import (
+	"github.com/Gexkill/jsonmap"
+	"log"
+)
+
+func main() {
 	mappazza := jsonmap.CreateJson(jsonmap.Maps{
 		"Name":          "service1a",
 		"Type":          "service1a",
@@ -97,14 +109,6 @@ func main() {
 		},
 	})
 
-	log.Printf("*****************************************")
-	log.Printf("Ricerca valori in Json - BEGIN")
-	log.Printf("*****************************************")
-
 	mappazza.Search("Configuration", "j")
-
-	log.Printf("*****************************************")
-	log.Printf("Ricerca valori in Json - END")
-	log.Printf("*****************************************")
 }
 ~~~
