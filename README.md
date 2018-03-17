@@ -5,7 +5,7 @@ An easy way to handle json file in your web application developed with go
 ### I will provide docs ASAP
 
 
-###1. EXAMPLE
+### 1. EXAMPLE
 ~~~ go
 package main
 
@@ -62,7 +62,7 @@ func main() {
 }
 ~~~
 
-###2. EXAMPLE
+### 2. EXAMPLE
 ~~~ go
 package main
 
